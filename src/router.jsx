@@ -1,6 +1,6 @@
 // Libraries
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import ManagePolls from './components/manage-polls/ManagePolls';
 import Survey from './components/poll/Poll';
 
@@ -9,6 +9,10 @@ import Survey from './components/poll/Poll';
 const Router = () => {
   return (
     <Switch>
+      <Route exact path='/'>
+        <Redirect to='/manage-polls' />
+      </Route>
+
       <Route exact path='/manage-polls' component={ManagePolls} />
       <Route path='/polls/:pollIndex' component={Survey} />
     </Switch>
