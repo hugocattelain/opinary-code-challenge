@@ -6,7 +6,7 @@
     "npm": "6.5.0",
     "yarn": "1.0.0"
   },
-  "main": "server.js",
+  "main": ".",
   "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
