@@ -1,0 +1,22 @@
+[
+  {
+    "text": "How do you feel today ?",
+    "answers": [
+      { "option": "Brilliant! I have so much energy", "votes": 22 },
+      { "option": "Always can be worse", "votes": 7 },
+      { "option": "Please, end my misery", "votes": 10 }
+    ],
+    "hasVoted": true,
+    "vote": "Please, end my misery"
+  },
+  {
+    "text": "How do you like Opinary test ?",
+    "answers": [
+      { "option": "It was great and so challenging", "votes": 9 },
+      { "option": "Not bad, but you can improve", "votes": 13 },
+      { "option": "It was a nightmare, never again", "votes": 2 }
+    ],
+    "hasVoted": false,
+    "vote": ""
+  }
+]
