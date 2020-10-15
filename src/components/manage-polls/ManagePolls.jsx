@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { withRouter } from 'react-router-dom';
 import defaultPolls from '../../data2.json';
 
 const ManagePolls = () => {
@@ -81,4 +82,4 @@ const ManagePolls = () => {
   );
 };
 
-export default ManagePolls;
+export default withRouter(ManagePolls);

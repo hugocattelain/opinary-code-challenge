@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { withRouter } from 'react-router-dom';
 import Poll from 'react-polls';
 import defaultPolls from '../../data2.json';
 
@@ -44,4 +45,4 @@ const Survey = ({ match }) => {
   );
 };
 
-export default Survey;
+export default withRouter(Survey);
