@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import { withRouter } from 'react-router-dom';
 import Poll from 'react-polls';
-import defaultPolls from '../../data2.json';
+import API from '../../API';
 
 const Survey = ({ match }) => {
   const [poll, setPoll] = useState(null);
-  const pollIndex = match.params.pollIndex;
+  const pollId = match.params.pollId;
 
   useEffect(() => {
-    setPoll(defaultPolls[pollIndex]); // Todo: import from localstorage
-  }, [pollIndex]);
+    API.getPoll(pollId).then(data => {
+      setPoll(data);
+    });
+  }, [pollId]);
 
   const handleVote = voteAnswer => {
     const newPollAnswers = poll.answers.map(answer => {
@@ -21,12 +23,10 @@ const Survey = ({ match }) => {
     const newPollQuestion = {
       ...poll,
       answers: newPollAnswers,
-      hasVoted: true,
       vote: voteAnswer,
     };
-
-    if (poll.hasVoted === false) {
-      setPoll(newPollQuestion); // Todo: save in localestorage
+    if (poll.vote !== '') {
+      API.setPoll(newPollQuestion).then(res => setPoll(newPollQuestion));
     }
   };
 

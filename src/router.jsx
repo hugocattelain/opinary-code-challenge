@@ -12,9 +12,8 @@ const Router = () => {
       <Route exact path='/'>
         <Redirect to='/manage-polls' />
       </Route>
-
       <Route exact path='/manage-polls' component={ManagePolls} />
-      <Route path='/polls/:pollIndex' component={Survey} />
+      <Route path='/poll/:pollId' component={Survey} />
     </Switch>
   );
 };

@@ -2,19 +2,34 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const fs = require('fs');
-const pollData = require('./data.json');
 
 const app = express();
+const PORT = process.env.PORT || 3001;
 app.use(cors());
 app.use(bodyParser.json());
 
-app.get('/poll', function(req, res) {
-  res.send(JSON.parse(fs.readFileSync('data.json')));
+app.get('/api/polls', function(req, res) {
+  res.send(JSON.parse(fs.readFileSync('./assets/data.json')));
 });
 
-app.post('/poll', function(req, res) {
+app.get('/api/poll/:id', function(req, res) {
+  const id = Number(req.params.id);
+  const polls = JSON.parse(fs.readFileSync('./assets/data.json'));
+  res.send(polls.find(poll => poll.id === id));
+});
+
+app.put('/api/poll/:id', function(req, res) {
+  const id = Number(req.params.id);
   if (req.body) {
-    fs.writeFileSync('data.json', JSON.stringify(req.body));
+    const data = req.body;
+    const polls = JSON.parse(fs.readFileSync('./assets/data.json'));
+    const newPolls = polls.map(poll => {
+      if (poll.id === id) {
+        return data;
+      }
+      return poll;
+    });
+    fs.writeFileSync('./assets/data.json', JSON.stringify(newPolls));
     res.send({
       message: 'Data Saved',
     });
@@ -25,4 +40,4 @@ app.post('/poll', function(req, res) {
   }
 });
 
-app.listen(5000, () => console.log('Server Running...'));
+app.listen(PORT, () => console.log(`Server Running on port ${PORT}`));

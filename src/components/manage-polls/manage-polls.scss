@@ -1,0 +1,52 @@
+.manage-polls {
+  &__container {
+    padding: 0 16px;
+  }
+
+  &__input {
+    width: 100%;
+    display: block;
+  }
+  &__title,
+  &__subtitle {
+    text-align: center;
+  }
+
+  &__title {
+    margin: 0 0 16px;
+    font-size: 1.6rem;
+  }
+
+  &__subtitle {
+    font-size: 1.4rem;
+    margin: 32px 0 16px;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    min-width: 300px;
+    margin: 0 16px 0 0;
+    padding: 16px;
+    border: 1px solid black;
+    border-radius: 4px;
+  }
+
+  &__answer {
+    display: flex;
+    padding: 4px 0;
+    input {
+      width: calc(100% - 40px);
+      padding: 4px 6px;
+    }
+  }
+}
+
+button {
+  background-color: unset;
+  box-shadow: unset;
+  border: unset;
+  width: 40px;
+}
