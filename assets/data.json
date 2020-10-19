@@ -7,7 +7,7 @@
       { "option": "Always can be worse", "votes": 12 },
       { "option": "Please, end my misery", "votes": 9 }
     ],
-    "vote": "Brilliant! I have so much energyyyy"
+    "vote": ""
   },
   {
     "id": 2,
@@ -17,6 +17,6 @@
       { "option": "Not bad, but you can improve", "votes": 9 },
       { "option": "It was a nightmare, never again", "votes": 5 }
     ],
-    "vote": "Not bad, but you can improve"
+    "vote": ""
   }
 ]
