@@ -25,7 +25,7 @@ const Survey = ({ match }) => {
       answers: newPollAnswers,
       vote: voteAnswer,
     };
-    if (poll.vote !== '') {
+    if (poll.vote === '') {
       API.setPoll(newPollQuestion).then(res => setPoll(newPollQuestion));
     }
   };

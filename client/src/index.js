@@ -5,13 +5,6 @@ import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
 
-/* ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('javascriptExample')
-); */
-
 ReactDOM.render(
   <BrowserRouter>
     <App />

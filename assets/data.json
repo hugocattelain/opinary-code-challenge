@@ -3,11 +3,11 @@
     "id": 1,
     "text": "How do you feel today ?",
     "answers": [
-      { "option": "Brilliant! I have so much energyyyy", "votes": 0 },
-      { "option": "Always can be worse", "votes": 0 },
-      { "option": "Please, end my misery", "votes": 0 }
+      { "option": "Brilliant! I have so much energyyyy", "votes": 21 },
+      { "option": "Always can be worse", "votes": 12 },
+      { "option": "Please, end my misery", "votes": 9 }
     ],
-    "vote": ""
+    "vote": "Brilliant! I have so much energyyyy"
   },
   {
     "id": 2,
