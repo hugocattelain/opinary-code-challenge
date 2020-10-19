@@ -16,6 +16,21 @@ app.get('/api/polls', function(req, res) {
   res.send(JSON.parse(fs.readFileSync('./assets/data.json')));
 });
 
+//CORS Definition
+app.use(function(req, res, next) {
+  res.setHeader(
+    'Access-Control-Allow-Headers',
+    'X-Requested-With,content-type'
+  );
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader(
+    'Access-Control-Allow-Methods',
+    'GET, POST, OPTIONS, PUT, PATCH, DELETE'
+  );
+  res.setHeader('Access-Control-Allow-Credentials', true);
+  next();
+});
+
 app.get('/api/poll/:id', function(req, res) {
   const id = Number(req.params.id);
   const polls = JSON.parse(fs.readFileSync('./assets/data.json'));
