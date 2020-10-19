@@ -9,6 +9,9 @@ const PORT = process.env.PORT || 3001;
 app.use(cors());
 app.use(bodyParser.json());
 
+// Express only serves static assets in production
+app.use(express.static(path.join(__dirname, 'client/build')));
+
 app.get('/api/polls', function(req, res) {
   res.send(JSON.parse(fs.readFileSync('./assets/data.json')));
 });
