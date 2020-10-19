@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const path = require('path');
 const bodyParser = require('body-parser');
 const fs = require('fs');
 
@@ -38,6 +39,11 @@ app.put('/api/poll/:id', function(req, res) {
       message: 'Error No Data',
     });
   }
+});
+
+// Serving the unknown routes to index.html
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
 });
 
 app.listen(PORT, () => console.log(`Server Running on port ${PORT}`));
