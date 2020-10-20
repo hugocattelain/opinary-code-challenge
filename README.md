@@ -18,7 +18,7 @@ If the last command does not automatically open the app in your browser, follow 
 
 ## Features
 
-Open one of the two static HTML files in the root folder to see the poll widget in action.
+Open one of the static HTML files in the root folder to see the poll widget in action.
 
 The poll widget has two default questions set (one per page).
 To change de questions/answers, open https://opinary-code-challenge.herokuapp.com/
@@ -30,3 +30,5 @@ NB: The app might take up to 20 seconds at first load to exit its idle mode.
 The user can answer only once to each question.
 
 When a question is changed, the answers count is reset.
+
+A copy of the default question data (with other user vote) an be found in './assets'.

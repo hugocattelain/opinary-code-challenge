@@ -3,9 +3,9 @@
     "id": 1,
     "text": "How do you feel today ?",
     "answers": [
-      { "option": "Brilliant! I have so much energy", "votes": 21 },
-      { "option": "Always can be worse", "votes": 12 },
-      { "option": "Please, end my misery", "votes": 9 }
+      { "option": "Brilliant! I have so much energy", "votes": 22 },
+      { "option": "Always can be worse", "votes": 7 },
+      { "option": "Please, end my misery", "votes": 10 }
     ],
     "vote": ""
   },
@@ -14,8 +14,8 @@
     "text": "How do you like Opinary test ?",
     "answers": [
       { "option": "It was great and so challenging", "votes": 15 },
-      { "option": "Not bad, but you can improve", "votes": 9 },
-      { "option": "It was a nightmare, never again", "votes": 6 }
+      { "option": "Not bad, but you can improve", "votes": 7 },
+      { "option": "It was a nightmare, never again", "votes": 5 }
     ],
     "vote": ""
   }
