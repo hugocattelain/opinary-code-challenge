@@ -3,7 +3,7 @@
     "id": 1,
     "text": "How do you feel today ?",
     "answers": [
-      { "option": "Brilliant! I have so much energyyyy", "votes": 21 },
+      { "option": "Brilliant! I have so much energy", "votes": 21 },
       { "option": "Always can be worse", "votes": 12 },
       { "option": "Please, end my misery", "votes": 9 }
     ],
@@ -15,7 +15,7 @@
     "answers": [
       { "option": "It was great and so challenging", "votes": 15 },
       { "option": "Not bad, but you can improve", "votes": 9 },
-      { "option": "It was a nightmare, never again", "votes": 5 }
+      { "option": "It was a nightmare, never again", "votes": 6 }
     ],
     "vote": ""
   }

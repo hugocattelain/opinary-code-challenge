@@ -2,7 +2,7 @@
 import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import ManagePolls from './components/manage-polls/ManagePolls';
-import Survey from './components/poll/Poll';
+import Survey from './components/survey/Survey';
 
 // Components
 

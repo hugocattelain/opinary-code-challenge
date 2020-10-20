@@ -24,11 +24,13 @@
 
   &__list {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
   &__item {
     min-width: 300px;
-    margin: 0 16px 0 0;
+    margin: 16px;
     padding: 16px;
     border: 1px solid black;
     border-radius: 4px;

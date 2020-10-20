@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { withRouter } from 'react-router-dom';
 import Poll from 'react-polls';
 import API from '../../API';
+import './survey.scss';
 
 const Survey = ({ match }) => {
   const [poll, setPoll] = useState(null);
